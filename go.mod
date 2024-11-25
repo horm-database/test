@@ -2,15 +2,9 @@ module yan/test
 
 go 1.20
 
-replace github.com/horm-database/go-horm/horm => ../go-horm/horm
-
-replace github.com/horm-database/common => ../common
-
-replace github.com/horm-database/orm => ../orm
-
 require (
-	github.com/horm-database/common v0.0.0-00010101000000-000000000000
-	github.com/horm-database/go-horm/horm v0.0.0-00010101000000-000000000000
+	github.com/horm-database/common v0.0.1
+	github.com/horm-database/go-horm/horm v0.0.2
 	go.uber.org/automaxprocs v1.6.0
 )
 
