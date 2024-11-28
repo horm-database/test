@@ -13,11 +13,11 @@ server:                           # 服务端配置
     target: ip://127.0.0.1:8180   # workspace 地址
     timeout: 30000                # 接口调用超时时间（毫秒）
     caller:                       # 调用方信息
-      - name: app.server.service1 # 调用方名称
+      - name: ws_test.app1.server1.service1 # 调用名
         appid: 10002              # 调用方 appid
         secret: S959223456        # 调用方秘钥
         timeout: 1000             # 超时时间
-      - name: app.server.service2 # 调用方名称
+      - name: ws_test.app2.server2.service2 # 调用名
         appid: 10003              # 调用方 appid
         secret: S499721834        # 调用方秘钥
         timeout: 2000             # 超时时间
