@@ -30,9 +30,8 @@ func queryMultiReturn() {
 	}
 
 	//horm 会对结构体参数自动编解码
-	var ret interface{}
 	isNil, err := horm.NewQuery("student_score_range").
-		ZAdd("student_score", data, data.Score).Exec(ctx, &ret)
+		ZAdd("student_score", data, data.Score).Exec(ctx)
 
 	results := make([]*Student, 0)
 	scores := make([]float64, 0)

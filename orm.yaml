@@ -1,7 +1,7 @@
 machine: server.access.gz003      # 本地机器名（容器名）
 machine_id: 3                     # 本地机器编号（容器编号）（主要用于 snowflake 生成全局唯一 id）
 local_ip: 127.0.0.1               # 本地IP，容器内为容器ip，物理机或虚拟机为本机ip
-location:                         # 本地机器所属区域，主要用于就近路由
+location:                         # 本地机器所属区域，主要用于 polaris 就近路由，如无服务发现可不填
   region: 腾讯云-华南
   zone: 广州
   compus: 园区1
