@@ -1,13 +1,13 @@
 package main
 
 import (
-	_ "go.uber.org/automaxprocs"
-
 	"github.com/horm-database/go-horm/horm"
+	_ "go.uber.org/automaxprocs"
 )
 
 func main() {
 	TestMySQL()
+	TestRedis()
 }
 
 // init 配置全局统一接入协议执行器

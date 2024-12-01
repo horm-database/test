@@ -1,26 +1,26 @@
-machine: server.access.gz003      # 机器名（容器名）
-machine_id: 3                     # 机器编号（容器编号）（主要用于 snowflake 生成全局唯一 id）
+machine: server.access.gz003      # 本地机器名（容器名）
+machine_id: 3                     # 本地机器编号（容器编号）（主要用于 snowflake 生成全局唯一 id）
 local_ip: 127.0.0.1               # 本地IP，容器内为容器ip，物理机或虚拟机为本机ip
-location:                         # 接入客户端所属区域，主要用于就近路由
+location:                         # 本地机器所属区域，主要用于就近路由
   region: 腾讯云-华南
   zone: 广州
   compus: 园区1
 
-server:                           # 服务端配置
+server:                           # 数据统一接入服务端配置
   - workspace_id: 31              # workspace id
     encryption: 1                 # 帧签名方式 0-无（默认）1-签名 2-加密（针对 Android、IOS 等外网非安全客户端）
     token: QUIs32ODQUIs32OD       # workspace token
-    target: ip://127.0.0.1:8180   # workspace 地址
-    timeout: 30000                # 接口调用超时时间（毫秒）
+    target: ip://127.0.0.1:8180   # 服务端地址
+    timeout: 3000000              # 接口调用超时时间（毫秒）
     caller:                       # 调用方信息
       - name: ws_test.app1.server1.service1 # 调用名
         appid: 10002              # 调用方 appid
         secret: S959223456        # 调用方秘钥
-        timeout: 1000             # 超时时间
+        timeout: 10000000         # 超时时间
       - name: ws_test.app2.server2.service2 # 调用名
         appid: 10003              # 调用方 appid
         secret: S499721834        # 调用方秘钥
-        timeout: 2000             # 超时时间
+        timeout: 2000000          # 超时时间
 
 log:
   - writer: console               # 控制台标准输出 默认
